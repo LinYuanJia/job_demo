@@ -1,0 +1,58 @@
+<!--components/detail/job_detail.wxml-->
+<view class="container">
+  <!-- 详情头部信息 -->
+  <view class="detail_header">
+    <!-- 列表头部 -->
+      <view class="job_header">
+        <text>{{job_list.message}}</text>
+        <text class="job_salary">{{job_list.salary}}</text>
+      </view>
+      <!-- 列表中部 -->
+      <view class="job_body">
+        <text>{{job_list.condition}}</text>
+      </view>
+      <!-- 列表尾部 -->
+      <view class="job_footer clearfix">
+        <text class="wuxian">{{job_list.fuli[0]}}</text>
+        <text class="jiaotong">{{job_list.fuli[1]}}</text>
+        <text class="nianzhong">{{job_list.fuli[2]}}</text>
+        <text class="jiaban">{{job_list.fuli[3]}}</text>
+      </view>
+      <!-- 列表收藏、红包 -->
+      <view class="job_star">
+        <view class="solid-star"><text class="iconfont icon-solid-star"></text></view>
+        <view class="hongbao"><text class="iconfont icon-hongbao"></text></view>
+        <view class="collect"><text>收藏</text></view>
+        <view class="share"><text>分享赚赏金</text></view>
+      </view>
+      <view class="tel_titel">
+        <image class="tel_img" src="../../imgs/title.png"></image>
+        <text>联系方式</text>
+      </view>
+  </view>
+  <!-- 中部联系方式 -->
+  <view class="detail_tel clearfix">
+    <image src="../../imgs/dianhua02.png"></image>
+    <view class="tel_lianxiren">
+      <image class="lianxiren" src="../../imgs/lianxiren.png"></image>
+      <text>刘洋</text>
+    </view>
+    <view class="tel_dianhua">
+      <image class="dianhua" src="../../imgs/dianhua01.png"></image>
+      <text>1355139136</text>
+    </view>
+    <view class="job_title">
+        <image class="tel_img" src="../../imgs/title.png"></image>
+        <text>职位详情</text>
+    </view>
+  </view>
+  <!-- 尾部职位详情 -->
+  <view class="detail_job">
+    <text>工作内容：\n1.通过聊天软件，在线快速准确地回复顾客咨询、解答顾客疑问,完成订单;\n2.主动向顾客推荐商品,促进顾客购买;\n3.及时整理订单信息,确保发货的及时性;\n4.主动联系已经购买过的顾客，进行有效的顾客维护;\n5.主动在已有渠道添加新客户;\n6.100%完成每月销售目标;</text>
+  </view>
+  <!-- 底部按钮 -->
+  <view class="bottom_button">
+    <button class="gouton" size="mini" bindtap="handleTalk">立即沟通</button>
+    <button class="shenqing" size="mini" bindtap="handleApply">申请职位</button>
+  </view>
+</view>

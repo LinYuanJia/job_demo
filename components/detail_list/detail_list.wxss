@@ -1,0 +1,65 @@
+/* components/detail_list/detail_list.wxss */
+page {
+  background-color: #f4f3f8;
+}
+.clearfix::before,.clearfix::after {
+  display: table;
+  content: "";
+}
+.clearfix::after {
+  clear: both;
+}
+.list1 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 220rpx;
+  background-color: #ffffff;
+  border: 1rpx solid #e7e7e7;
+  padding: 29rpx 27rpx 0 30rpx;
+  color: #666666;
+  font-size: 28rpx; 
+  
+}
+.salary {
+  color: #78d4cd;
+  text-align: right;
+}
+.list_header {
+  display: flex;
+  justify-content: space-between;
+}
+.list_body {
+  font-size: 24rpx;
+  color: #999999;
+  margin: 15rpx 0;
+}
+.list_footer text {
+  display: block;
+  float: left;
+  width: 120rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+  background-color: #fcf9db;
+  color: #9e9e12;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 6rpx;
+}
+.list_footer .wuxian {
+  background-color: #77d5ce;
+  color: #0c9d9d;
+}
+.list_footer .nianzhong {
+  background-color: #e3f4ff;
+  color: #5db3ac;
+}
+.list_footer .jiaban {
+  background-color: #d8b38a;
+  color: #fcf9f6;
+}
+.timer {
+  font-size: 22rpx;
+  color: #b4b4b4;
+  text-align: right;
+}

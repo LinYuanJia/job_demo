@@ -1,0 +1,26 @@
+<!--components/detail_list/detail_list.wxml-->
+<view class="main_body">
+    <!-- 列表结构 -->
+    <view class="list1" wx:for="{{detail_list}}" wx:key="index">
+      <!-- 列表头部 -->
+      <view class="list_header">
+        <text>{{item.message}}</text>
+        <text class="salary">{{item.salary}}</text>
+      </view>
+      <!-- 列表中部 -->
+      <view class="list_body">
+        <text>{{item.condition}}</text>
+      </view>
+      <!-- 列表尾部 -->
+      <view class="list_footer clearfix">
+        <text class="wuxian">{{item.fuli[0]}}</text>
+        <text class="jiaotong">{{item.fuli[1]}}</text>
+        <text class="nianzhong">{{item.fuli[2]}}</text>
+        <text class="jiaban">{{item.fuli[3]}}</text>
+      </view>
+      <!-- 发布时间 -->
+      <view class="timer">
+        <text>{{item.time}}</text>
+      </view>
+    </view>
+</view>
