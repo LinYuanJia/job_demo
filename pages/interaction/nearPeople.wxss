@@ -1,0 +1,67 @@
+/* pages/interaction/interaction.wxss */
+page {
+  background-color: #f4f3f8;
+}
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  color: #797979;
+  font-size: 28rpx;
+  padding: 26rpx 0 10rpx 105rpx;
+  background-color: #ffffff;
+  margin-top: 2rpx; 
+}
+.header_left {
+  width: 50%;
+  height: 80rpx;
+  color: #52cbc2;
+}
+.header_right {
+  width: 50%;
+  height: 80rpx;
+  text-align: center;
+}
+.header image {
+  width: 85rpx;
+  height: 4rpx;
+  position: relative;
+  bottom: 20rpx;
+}
+.body_main {
+  box-sizing: border-box;
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  padding: 25rpx 30rpx;
+  border: 1rpx solid #e6e6e6;
+  background-color: #f4f3f8;
+  align-items: center;
+}
+.main_left {
+  flex: 2;
+}
+.main_left image {
+  height: 89rpx;
+  width: 89rpx;
+  border-radius: 50%;
+}
+.main_middle {
+  flex: 3;
+
+}
+.main_middle .middle_a {
+  font-size: 30rpx;
+  color: #2e2e2e;
+}
+.main_middle .middle_b {
+  font-size: 22rpx;
+  color: #89898a;
+}
+.main_right {
+  flex: 5;
+  text-align: right;
+  font-size: 24rpx;
+  color: #7a7a7a;
+}

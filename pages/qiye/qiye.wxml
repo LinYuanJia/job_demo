@@ -1,0 +1,42 @@
+<!--pages/qiye/qiye.wxml-->
+<view class="container">
+  <!-- 企业注册 -->
+  <view class="qiye_zhuce">
+    <view class="zhuce_header">
+      <text>企业注册【当前城市：成都】</text>
+    </view>
+    <view wx:for="{{zhuce_list}}" wx:key="index" class="zhuce_list">
+      <text>{{item.name}}</text>
+      <input placeholder="{{item.value}}"></input>
+    </view>
+    <button class="qiye_weizhi">获取位置</button>
+  </view>
+  <!-- 公司介绍 -->
+  <view class="gs_jieshao">
+    <view class="jieshao_header">
+      <text>公司介绍</text>
+    </view>
+    <view class="jieshao_main">
+      <textarea placeholder="请填写企业介绍"></textarea>
+    </view>
+  </view>
+  <!-- 企业logo -->
+  <view class="qiye_logo">
+    <view class="logo_header">
+      <text>企业logo</text>
+    </view>
+    <view class="logo_main">
+      
+    </view>
+  </view>
+  <!-- 企业执照 -->
+  <view class="qiye_zhizhao">
+    <view class="zhizhao_header">
+      <text>企业执照或相关证件</text>
+    </view>
+    <view class="zhizhao_main">
+      
+    </view>
+  </view>
+  <button class="footer_Btn">注册企业信息</button>
+</view>

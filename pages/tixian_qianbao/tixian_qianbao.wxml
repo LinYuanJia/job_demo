@@ -1,0 +1,13 @@
+<!--pages/tixian_qianbao/tixian_qianbao.wxml-->
+<view class="container">
+  <!-- 上方输入框 -->
+  <view class="tixian">
+   <text class="t_a">账户佣金将提现到微信</text>
+   <text class="t_b">注：提现需是20元的倍数额</text>
+   <input placeholder="¥ 263.34"></input>
+   <text class="t_c">账户余额：￥8563.23</text>
+   <text class="t_d"> 提现记录</text>
+  </view>
+  <!-- 下方按钮 -->
+  <button>提现到微信</button>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/detail/detail.wxml-->
+<job-detail bind:talk="handleTalk" bind:apply="handleApply"/>
+<!-- 职位申请弹窗 -->
+<view class="apply" hidden="{{applyHide}}">
+  <view class="apply_bg"></view>
+  <view class="apply_ziliao">
+    <text>个人资料填写</text>
+    <form bindsubmit="">
+      <view class="name">
+        <text>姓 名</text>
+        <input placeholder="张某某"></input>
+      </view>
+      <view class="gender">
+        <text>性 别</text>
+        <input placeholder="女"></input>
+      </view>
+      <view class="tel">
+        <text>联系电话</text>
+        <input placeholder="18011419678"></input>
+      </view>
+      <view class="apply_button">
+        <button bindtap="handleApply">取消</button>
+        <button class="queding">确定</button>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+/* pages/qianbao/qianbao.wxss */
+.qianbao {
+  position: relative;
+  color: #ffffff;
+}
+.qianbao_bg {
+  width: 750rpx;
+  height: 348rpx;
+}
+.qianbao_text {
+  position: absolute;
+  top: 175rpx;
+  left: 58rpx;
+}
+.qianban_quan {
+  position: absolute;
+  top: 198rpx;
+  right: 225rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.tixian_yonjin, .shouru_mingxi, .tixian_mingxi {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #e3e2e5;
+  padding: 30rpx;
+}
+.tixian_button {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  width: 114rpx;
+  height: 56rpx;
+  color: #ffffff;
+  background-color: #51cbc2;
+  line-height: 56rpx;
+  font-size: 36rpx;
+  padding: 0;
+}
+.right_arrow {
+  width: 17rpx;
+  height: 32rpx;
+}

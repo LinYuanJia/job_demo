@@ -1,0 +1,60 @@
+<!--pages/tixian_mingxi/tixian_mingxi.wxml-->
+<view class="container">
+  <!-- 整月 -->
+  <view class="mingxi_body">
+    <!-- 提现明细头部月份 -->
+    <view class="mingxi_header">
+      <text>2019年6月 </text><text class="iconfont xiala_arrow">\n</text>
+      <text style="font-size:28rpx; color:#969696">共计收入¥200.00</text>
+    </view>
+    <!-- 中部详情列表 -->
+    <view class="mingxi_list">
+     <image src="../../imgs/jinbi.png"></image>
+     <view>
+      <text class="text_a">佣金提现到微信钱包\n</text>
+      <text class="text_b">6月29日 13:56</text>
+     </view>
+     <view>
+      <text>¥100.00</text>
+     </view>
+    </view>
+    <view class="mingxi_list">
+     <image src="../../imgs/jinbi.png"></image>
+     <view>
+      <text class="text_a">佣金提现到微信钱包\n</text>
+      <text class="text_b">6月29日 13:56</text>
+     </view>
+     <view>
+      <text>¥100.00</text>
+     </view>
+    </view>
+  </view>
+  <view class="mingxi_body">
+    <!-- 提现明细头部月份 -->
+    <view class="mingxi_header">
+      <text>2019年5月 </text><text class="iconfont xiala_arrow">\n</text>
+      <text style="font-size:28rpx; color:#969696">共计收入¥200.00</text>
+    </view>
+    <!-- 中部详情列表 -->
+    <view class="mingxi_list">
+     <image src="../../imgs/jinbi.png"></image>
+     <view>
+      <text class="text_a">佣金提现到微信钱包\n</text>
+      <text class="text_b">6月29日 13:56</text>
+     </view>
+     <view>
+      <text>¥100.00</text>
+     </view>
+    </view>
+    <view class="mingxi_list">
+     <image src="../../imgs/jinbi.png"></image>
+     <view>
+      <text class="text_a">佣金提现到微信钱包\n</text>
+      <text class="text_b">6月29日 13:56</text>
+     </view>
+     <view>
+      <text>¥100.00</text>
+     </view>
+    </view>
+  </view>
+</view>

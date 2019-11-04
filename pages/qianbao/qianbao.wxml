@@ -1,0 +1,32 @@
+<!--pages/qianbao/qianbao.wxml-->
+<view class="container">
+  <!-- 上方钱包图标 -->
+  <view class="qianbao">
+    <image class="qianbao_bg" src="../../imgs/qianbao.png" ></image>
+    <view class="qianbao_text">
+      <text style="font-size:36rpx">我的佣金\n</text>
+      <text style="font-size:60rpx">¥ 99.99</text>
+    </view>
+    <image class="qianban_quan" src="../../imgs/yuanquan.png"></image>
+  </view>
+  <!-- 下方明细列表 -->
+  <view class="yongjin_list">
+    <view class="tixian_yonjin">
+      <text>可提现佣金</text>
+      <text style="padding-right:300rpx; color:#9a9a9a">178.5</text>
+      <navigator url="/pages/tixian_qianbao/tixian_qianbao"><button class="tixian_button">提现</button></navigator>
+    </view>
+    <navigator url="/pages/tixian_shouru/tixian_shouru">
+    <view class="shouru_mingxi">
+      <text>收入明细</text>
+      <image src="../../imgs/right_arrow.png" class="right_arrow"></image>
+    </view>
+    </navigator>
+    <navigator url="/pages/tixian_mingxi/tixian_mingxi">
+    <view class="tixian_mingxi">
+      <text>提现明细</text>
+      <image src="../../imgs/right_arrow.png" class="right_arrow"></image>
+    </view>
+    </navigator>
+  </view>
+</view>

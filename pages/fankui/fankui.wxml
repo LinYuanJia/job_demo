@@ -1,0 +1,18 @@
+<!--pages/fankui/fankui.wxml-->
+<view class="container">
+  <!-- 标题 -->
+  <view class="fankui_header">
+    <input placeholder="标题"></input>
+  </view>
+  <!-- 内容 -->
+  <view class="fankui_neirong">
+    <input placeholder="内容"></input>
+  </view>
+  <!-- 上传图片 -->
+  <view class="fankui_img">
+    <text>上传图片</text>
+    <input placeholder="请上传图片"></input>
+  </view>
+  <!-- 底部button -->
+  <button class="fankui_btn">提交</button>
+</view>

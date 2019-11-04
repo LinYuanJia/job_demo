@@ -1,0 +1,54 @@
+/* pages/qiye/qiye.wxss */
+page {
+  background-color: #e9e8ec;
+
+}
+.qiye_zhuce {
+  position: relative;
+  width: 100%;
+  height: 723rpx;
+}
+.zhuce_header, .jieshao_header, .logo_header, .zhizhao_header {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+}
+.zhuce_list {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  background-color: #ffffff;
+  padding-left: 30rpx;
+  border-bottom: 1rpx solid #dedde2;
+  font-size: 28rpx;
+}
+.zhuce_list text {
+  display: block;
+  width: 200rpx;
+}
+.qiye_weizhi {
+  position: absolute;
+  top: 655rpx;
+  right: 30rpx;
+  width: 127rpx;
+  height: 51rpx;
+  background-color: #51cbc2;
+  color: #ffffff;
+  font-size: 28rpx;
+  line-height: 51rpx;
+  padding: 0;
+}
+.jieshao_main, .logo_main, .zhizhao_main {
+  width: 100%;
+  height: 240rpx;
+  background-color: #ffffff;
+}
+.footer_Btn {
+  margin-top: 20rpx;
+  background-color:  #51cbc2;
+  color: #ffffff;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+}

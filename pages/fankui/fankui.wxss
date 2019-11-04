@@ -1,0 +1,36 @@
+/* pages/fankui/fankui.wxss */
+page {
+  background-color: #f4f3f8;
+}
+.fankui_header {
+  width: 100%;
+  margin-top: 30rpx;
+}
+.fankui_header input, .fankui_neirong input, .fankui_img input {
+  width: 690rpx;
+  height: 80rpx;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 38rpx;
+}
+.fankui_neirong input {
+  margin: 30rpx auto;
+  height: 320rpx;
+}
+.fankui_img text {
+  margin-left: 30rpx;
+}
+.fankui_img input {
+  height: 200rpx;
+}
+.fankui_btn {
+  margin-top: 30rpx;
+  width: 690rpx;
+  height: 80rpx;
+  background-color: #52cac1;
+  color: #ffffff;
+  font-size: 36rpx;
+  line-height: 80rpx;
+}

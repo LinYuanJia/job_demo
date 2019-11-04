@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- 头部title开始 -->
+  <view class="header">
+    <view hover-class="tap_header" class="header_left">
+      <text>附近人</text>
+      <text>\n</text>
+      <image src="../../imgs/near01.png"></image>
+    </view>
+    <view class="header_right">
+      <text>企业</text>
+    </view>
+  </view>
+    <!-- 头部结束 -->
+    <!-- 主体列表项-开始 -->
+    <view class="body">
+      <view wx:for="{{nearPeopleList}}" wx:key="{{index}}" class="body_main">
+        <view class="main_left">
+          <image src="{{item.img_url}}" mode="aspectFix"></image>
+        </view>
+        <view class="main_middle">
+          <text class="middle_a">{{item.name}}</text>
+          <text>\n</text>
+          <text class="middle_b">{{item.title}}</text>
+        </view>
+        <view class="main_right">距离你{{item.far_away}}米</view>
+      </view>
+    </view>
+    <!-- 列表结束 -->
+</view>

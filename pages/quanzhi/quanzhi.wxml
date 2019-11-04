@@ -1,0 +1,62 @@
+<!--pages/quanzhi/quanzhi.wxml-->
+<view class="container">
+  <!-- 头部导航菜单栏---开始 -->
+  <view class="header">
+    <view wx:for="{{select_list}}" wx:key="index" class="header_list {{currentIndex===index ? 'active':''}}" 
+          bindtap="{{select_function[index]}}" data-index="{{index}}">
+      <text>{{item.message}}</text><text class="iconfont xiala_arrow"></text>
+    </view>
+  </view>
+  <!-- 头部导航菜单栏---结束 -->
+  <!-- 主体列表---开始 -->
+  <view class="main_body">
+    <!-- 列表结构 -->
+    <view class="list1" wx:for="{{detail_list}}" wx:key="index">
+      <!-- 列表头部 -->
+      <navigator url="/pages/detail/detail" hover-class="none">
+      <view class="list_header">
+        <text>{{item.title}}</text>
+        <text class="salary">{{item.salary}}</text>
+      </view>
+      <!-- 列表中部 -->
+      <view class="list_body">
+        <text>{{item.region_name}} | {{item.sex}} | {{item.agemin}}岁~{{item.agemax}}岁</text>
+      </view>
+      <!-- 列表尾部 -->
+      <view class="list_footer clearfix">
+        <text class="wuxian">{{item.fuli[0]}}</text>
+        <text class="jiaotong">{{item.fuli[1]}}</text>
+        <text class="nianzhong">{{item.fuli[2]}}</text>
+        <text class="jiaban">{{item.fuli[3]}}</text>
+      </view>
+      <!-- 发布时间 -->
+      <view class="timer">
+        <text>{{item.time}}</text>
+      </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 城市地区选择弹窗 -->
+  <view class="city_select" hidden="{{cityHide}}">
+    <view class="city_bg"></view>
+    <view class="city_body">
+      <view wx:for="{{cityList}}" wx:key="index" class="city_list {{textIndex==index ? 'active_b':''}}"
+            data-index="{{index}}"
+            bindtap="textTap" >
+        <text>{{item}}</text>
+        <text class="iconfont icon-gougou {{textIndex==index ? 'active_b':'gou_arrow'}}"></text>
+      </view>  
+    </view>
+  </view>
+  <!-- 职位类别弹窗 -->
+  <view class="job_class" hidden="{{jobHide}}">
+    <view class="job_bg"></view>
+    <view class="job_body">
+      <view wx:for="{{jobList}}" wx:key="index" class="job_list {{jobIndex==index ? 'active_c':''}}"
+            data-index="{{index}}"
+            bindtap="jobTap">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,116 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 头部------搜索框、轮播图和导航菜单 -->
+  <view class="header">
+    <!-- 搜索框开始 -->
+    <view class="search">
+      <view class="search_left">
+        <text>成都</text>
+        <image  src="../../imgs/pulldown.png"></image>
+      </view>
+      <view class="search_middle">
+        <text>|</text>
+        <input placeholder="UI设计师"></input>
+      </view>
+      <view class="search_right">
+        <image src="../../imgs/search.png"></image>
+      </view>
+    </view>
+    <!-- 轮播图开始 -->
+    <view class="slideshow">
+      <swiper autoplay="true" circular="true" interval="4000">
+        <block wx:for="{{photoList}}" wx:key="index">
+          <swiper-item><image src="{{item}}"></image></swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 导航栏开始 -->
+    <view class="navbar">
+      <navigator url="../quanzhi/quanzhi" hover-class="none">
+        <view class="quanzhi">
+          <image src="../../imgs/quanzhi.png"></image>
+          <text>\n</text>
+          <text>找全职</text>
+        </view>
+      </navigator>
+      <view class="jianzhi">
+        <image src="../../imgs/jianzhi.png"></image>
+        <text>\n</text>
+        <text>找兼职</text>
+      </view>
+      <view class="fujinqiuzhi">
+        <image src="../../imgs/fujinqiuzhi.png"></image>
+        <text>\n</text>
+        <text>附近求职者</text>
+      </view>
+      <view class="fujinzhaopin">
+        <image src="../../imgs/fujinzhaopin.png"></image>
+        <text>\n</text>
+        <text>附近招聘</text>
+      </view>
+    </view>
+  </view>
+  <!-- 头部结束 -->
+  <!-- 主体开始-------title栏、详情列表 -->
+  <view class="main">
+    <!-- title栏 -->
+    <view class="title">
+      <image src="../../imgs/title.png"></image>
+      <text>最新职位</text>
+    </view>
+    <!-- 详情列表栏 -->
+    <view class="list">
+     <view class="list1">
+      <view class="list_header">
+        <text>苹果手机客服</text>
+        <text class="salary">3500.00/月</text>
+      </view>
+      <view class="list_body">
+        <text>靖江区 | 男女不限 | 18岁~25岁</text>
+      </view>
+      <view class="list_footer clearfix">
+        <text class="wuxian">五险一金</text>
+        <text class="jiaotong">交通补贴</text>
+        <text class="nianzhong">年终奖</text>
+        <text class="jiaban">加班补贴</text>
+      </view>
+      <view class="timer">
+        <text>2小时前发布</text>
+      </view>
+     </view>
+     <view class="list2">
+      <view class="list_header">
+        <text>苹果手机客服</text>
+        <text class="salary">3500.00/月</text>
+      </view>
+      <view class="list_body">
+        <text>靖江区 | 男女不限 | 18岁~25岁</text>
+      </view>
+      <view class="list_footer clearfix">
+        <text class="wuxian">五险一金</text>
+        <text class="jiaotong">交通补贴</text>
+        <text class="nianzhong">年终奖</text>
+        <text class="jiaban">加班补贴</text>
+      </view>
+      <view class="timer">
+        <text>2小时前发布</text>
+      </view>
+     </view>
+    </view>
+    <!-- 列表栏结束 -->
+  </view>
+  <!-- 红包 -->
+  <view class="redbag" bindtap="redClick" hidden="{{isFalse}}">
+    <image mode="widthFix" src="../../imgs/redbag.png"></image>
+  </view>
+  <view class="bigred" hidden="{{!isFalse}}">
+    <view class="bg_block"></view>
+    <image class="bg_redimg" src="../../imgs/bigredbag.png"></image>
+    <view class="bigred_text">
+      <text style="font-size:80rpx;color:white;">恭喜您分享获得\n</text>
+      <text style="font-size:100rpx;color:white;">{{redbag}}元\n</text>
+      <text style="font-size:36rpx;color:white;">金额已自动存入钱包</text>
+    </view>
+    <image class="redexit" src="../../imgs/redexit.png" bindtap="redExit"></image>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "job-detail":"/components/detail/job_detail"
+  },
+  "navigationBarTitleText": "详情"
+}

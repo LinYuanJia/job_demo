@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "detail-list":"/components/detail_list/detail_list"
+  }
+}

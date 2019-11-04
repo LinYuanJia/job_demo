@@ -1,0 +1,41 @@
+/* pages/shangjin/shangjin.wxss */
+.shangjin_header {
+  width: 750rpx;
+  height: 496rpx;
+}
+.shangjin_body {
+  width: 100%;
+  height: 360rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #333333;
+}
+.shangjin_name, .shangjin_tel {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 46rpx 30rpx;
+  border-bottom: 1rpx solid #bfbfc3;
+  font-size: 28rpx;
+}
+.shangjin_name > image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.shangjin_tel > image {
+  width: 41rpx;
+  height: 58rpx;
+}
+.shangjin_body input {
+  text-align: right;
+}
+.shangjin_footer {
+  margin: 90rpx auto;
+  width: 690rpx;
+  height: 80rpx;
+  background-color: #52cac1;
+  color: #ffffff;
+  font-size: 36rpx;
+  line-height: 80rpx;
+}

@@ -1,0 +1,20 @@
+<!--pages/shangjin/shangjin.wxml-->
+<view class="container">
+  <image class="shangjin_header" src="../../imgs/shangjin_bg.png"></image>
+  <!-- 中部input框 -->
+  <view class="shangjin_body">
+    <text>注册信息填写</text>
+    <view class="shangjin_name">
+      <image src="../../imgs/shangjin_name.png"></image>
+      <text>姓 名</text>
+      <input placeholder="张某"></input>
+    </view>
+    <view class="shangjin_tel">
+      <image src="../../imgs/shangjin_tel.png"></image>
+      <text>手机号码</text>
+      <input placeholder="13566835741"></input>
+    </view>
+  </view>
+  <!-- 底部button -->
+  <button class="shangjin_footer">立即注册</button>
+</view>

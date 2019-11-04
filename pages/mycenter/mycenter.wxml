@@ -1,0 +1,32 @@
+<!--pages/mycenter/mycenter.wxml-->
+<view class="container">
+  <!-- 头部个人信息及背景图 -->
+  <view class="header">
+    <image src="../../imgs/mine01.jpg"></image>
+    <!-- 左侧头像昵称 -->
+    <view class="header_left">
+      <image src="../../imgs/mine02.jpg" style="margin-right:20rpx"></image>
+      <button class="login_btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"><text>求职者</text></button>
+    </view>
+    <!-- 右侧钱包按钮 -->
+    <view class="header_right">
+      <navigator url="/pages/qianbao/qianbao"><text>我的钱包</text></navigator>
+    </view>
+  </view>
+  <!-- 导航栏部分----开始 -->
+  <view class="navbar">
+    <view wx:for="{{navlist}}" wx:key="index">
+      <image src="{{item.img_url}}"></image>
+      <navigator url="{{item.nav_url}}"><text>{{item.name}}</text></navigator>
+    </view>
+    <text>|</text>
+  </view>
+  <!-- 主体菜单列表--开始 -->
+  <view class="list_body">
+    <view wx:for="{{mydetail}}" wx:key="index" class="list_main">
+        <image src="{{item.img_urla}}" class="before"></image>
+        <navigator url="{{item.share_url}}" hover-class="none"><text>{{item.message}}</text></navigator>
+        <image src="{{item.img_urlb}}" class="arrow"></image>
+    </view>
+  </view>
+</view>
