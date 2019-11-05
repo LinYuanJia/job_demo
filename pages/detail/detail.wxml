@@ -1,5 +1,5 @@
 <!--pages/detail/detail.wxml-->
-<job-detail bind:talk="handleTalk" bind:apply="handleApply"/>
+<job-detail bind:talk="handleTalk" bind:apply="handleApply" jobList="{{job_list}}"/>
 <!-- 职位申请弹窗 -->
 <view class="apply" hidden="{{applyHide}}">
   <view class="apply_bg"></view>

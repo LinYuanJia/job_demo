@@ -1,11 +1,14 @@
 // pages/detail/detail.js
+import request from "../../service/netWork.js"
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    applyHide:true
+    applyHide: true,
+    job_list: {}
   },
 
   handleTalk(){
@@ -18,11 +21,38 @@ Page({
     })
   },
 
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    request({
+      url: "http://job.dongdongidea.com/index/Position/details",
+      method: "get",
+      data: {
+        id: options.id,
+        user_id: options.user_id
+      }
+    }).then(res => {
+      const oldData = res.data.data
+      oldData.welfare = oldData.welfare.split(",")
+      switch(oldData.sex){
+        case 1:
+          oldData.sex = "男";
+          break;
+        case 2:
+          oldData.sex = "女";
+          break;
+        case 3:
+          oldData.sex = "男女不限"
+          break;
+      }
+      this.setData({
+        job_list: oldData
+      })
+      console.log(oldData)
+    })
   },
 
   /**
