@@ -1,3 +1,5 @@
 {
-  "navigationBarTitleText": "全职招聘"
+  "navigationBarTitleText": "全职招聘",
+  "onReachBottomDistance": 80,
+  "enablePullDownRefresh":true
 }

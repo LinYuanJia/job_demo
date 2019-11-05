@@ -13,10 +13,10 @@
     <!-- 列表结构 -->
     <view class="list1" wx:for="{{detail_list}}" wx:key="index">
       <!-- 列表头部 -->
-      <navigator url="/pages/detail/detail" hover-class="none">
+      <navigator url="/pages/detail/detail?id={{item.id}}&user_id={{item.user_id}}" hover-class="none">
       <view class="list_header">
         <text>{{item.title}}</text>
-        <text class="salary">{{item.salary}}</text>
+        <text class="salary">{{item.salary}}.00/月</text>
       </view>
       <!-- 列表中部 -->
       <view class="list_body">
@@ -24,14 +24,14 @@
       </view>
       <!-- 列表尾部 -->
       <view class="list_footer clearfix">
-        <text class="wuxian">{{item.fuli[0]}}</text>
-        <text class="jiaotong">{{item.fuli[1]}}</text>
-        <text class="nianzhong">{{item.fuli[2]}}</text>
-        <text class="jiaban">{{item.fuli[3]}}</text>
+        <text class="wuxian" wx:if="{{item.welfare.length>0}}">{{item.welfare[0]}}</text>
+        <text class="jiaotong" wx:if="{{item.welfare.length>1}}">{{item.welfare[1]}}</text>
+        <text class="nianzhong" wx:if="{{item.welfare.length>2}}">{{item.welfare[2]}}</text>
+        <text class="jiaban" wx:if="{{item.welfare.length>4}}">{{item.welfare[3]}}</text>
       </view>
       <!-- 发布时间 -->
       <view class="timer">
-        <text>{{item.time}}</text>
+        <text>2小时前发布</text>
       </view>
       </navigator>
     </view>

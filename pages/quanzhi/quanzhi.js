@@ -1,5 +1,7 @@
 // pages/quanzhi/quanzhi.js
-import request from "../../service/netWork.js"
+import {
+  get_listData
+} from "../../service/qzRequest.js"
 
 Page({
 
@@ -38,8 +40,65 @@ Page({
     jobList: ["全部", "广告设计", "电商淘宝", "装饰装修", "工业设计", "电脑维修","广告设计", "电商淘宝", "装饰装修", "工业设计"],
 
 
-    detail_list:[]
+    detail_list:[],
+    pageNo: 1
   },
+  /*优化从后台请求来的数据 */
+  handle_detailList(event){
+    let list = []
+    for(var item of event){
+      item.welfare=item.welfare.split(",")
+      switch(item.sex){
+        case 1:
+          item.sex = "男";
+          break;
+        case 2:
+          item.sex = "女";
+          break;
+        case 3:
+          item.sex = "男女不限"
+          break;
+      }
+      list.push(item)
+    }
+    return list
+  },
+  
+  _get_listData(){
+    const page = this.data.pageNo
+    get_listData(page).then(res => {
+      const list = this.handle_detailList(res.data.data)
+      const oldList = this.data.detail_list
+      oldList.push(...list)
+      this.setData({
+        detail_list: oldList,
+        pageNo: this.data.pageNo+1
+      })
+    }).catch(err => {
+      console.log(err)
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+    */
+  onLoad: function (options) {
+    this._get_listData()
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    this._get_listData()
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    this._get_listData()
+  },
+
 
   /*---------------------------------事件监听函数-------------------------------------*/
 
@@ -77,46 +136,7 @@ Page({
     this.setData({
       jobIndex: event.currentTarget.dataset.index
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-    */
-  onLoad: function (options) {
-    request({
-      url:"http://job.dongdongidea.com/index/Position/index",
-      data:{
-        pageno:1
-      }
-    }).then(res => {
-      const list = res.data.data
-      this.setData({
-        detail_list:list
-      })
-    }).catch(err => {
-      console.log(err);
-    })
-
-    /* 优化后端数据，在前台显示 */
-    console.log(list)
-
-  },
-
- 
-
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
   }
+
 
 })
